@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:id="@+id/img_rose"
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       android:src="@drawable/rose"
+       android:background="@color/colorPink"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <TextView
+       android:id="@+id/txt_flower1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorBlue"
+      android:text="@string/txt_flower1"
+       android:textSize="20dp"
+       app:layout_constraintTop_toBottomOf="@id/img_rose"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:layout_marginTop="25dp"
+       android:layout_marginLeft="20dp"/>
+
+   <TextView
+       android:id="@+id/txt_flower2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorBlue"
+       android:text="@string/txt_flower2"
+       android:textSize="20dp"
+       app:layout_constraintTop_toBottomOf="@id/txt_flower1"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:layout_marginTop="0dp"
+       android:layout_marginLeft="20dp"/>
+
+   <ImageView
+       android:id="@+id/ic_star"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:src="@drawable/ic_star"
+       app:layout_constraintTop_toBottomOf="@id/txt_flower2"
+       android:layout_marginTop="30dp"
+       android:layout_marginLeft="20dp"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintLeft_toRightOf="@+id/txt_editor_choice"/>
+
+   <TextView
+       android:id="@+id/txt_editor_choice"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Editor's Choice"
+       android:textSize="20dp"
+       app:layout_constraintTop_toBottomOf="@id/txt_flower2"
+       android:layout_marginTop="30dp"
+       android:layout_marginLeft="10dp"
+       android:textColor="@color/colorPink"
+       app:layout_constraintLeft_toRightOf="@id/ic_star"/>
+
+   <TextView
+       android:id="@+id/txt_long"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorBlue"
+       android:text="We're all a little weird. And life is a little weird. And when we find someone whose weirdness is compatiable with ours, we join up with them and fall into mutually satisfying weidness-and call it love-true love."
+       app:layout_constraintTop_toBottomOf="@+id/ic_star"
+       android:layout_marginTop="25dp"
+       android:layout_marginLeft="15dp"
+       app:layout_constraintLeft_toLeftOf="parent"/>
+
+   <TextView
+       android:id="@+id/txt_short"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorBlue"
+       android:text="And this crazy life, and through these"
+       app:layout_constraintTop_toBottomOf="@id/txt_long"
+       android:layout_marginTop="5dp"
+       android:layout_marginLeft="15dp"
+       app:layout_constraintLeft_toLeftOf="parent" />
+
+   <TextView
+       android:id="@+id/txt_price"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorBlue"
+       android:text="$ 99.9"
+       android:layout_marginTop="35dp"
+       android:layout_marginLeft="20dp"
+       android:textSize="20dp"
+       app:layout_constraintTop_toBottomOf="@id/txt_short"
+       app:layout_constraintLeft_toLeftOf="parent"
+       />
+//app:layout_constraintRight_toLeftOf="@id/cv_btn_order"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_btn_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_short">
+
+        //        app:layout_constraintLeft_toRightOf="@id/txt_price"
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPink"
+            android:text="@string/btn_order"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_short" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
